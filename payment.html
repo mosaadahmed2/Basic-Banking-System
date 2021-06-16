@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Transfer</title><meta charset="UTF-8">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<style>
+
+   <link rel="stylesheet" href="https://chavali19.github.io/my-project/customer.css">
+  
+<link rel="stylesheet" href="https://chavali19.github.io/my-project/style.css">
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 15px 25px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: black;
+  font-family: Times New Roman;
+  font-size: 40px;
+  padding-top: 40px;
+  margin-left: 30px;
+}
+h2 {
+  color: black;
+    font-family: Times New Roman;
+  font-size: 18px;
+  margin-left: 20px;
+}
+  h3{
+  color: black;
+      font-family: Times New Roman;
+  font-size: 18px;
+  margin-left: 20px;
+}
+body {
+  background-image: url("detail1.jpg");
+  background-size: 1600px 720px;
+}
+   .exit {
+  border: none;
+      color:#E42217;
+  padding: 10px 40px;
+   border-radius:5px;
+      position:fixed;
+      bottom:-4px;
+      left:10px;
+      margin-top: 20px;
+   margin-left: 80px;
+  font-size: 20px;
+  cursor: pointer;
+    
+  display: inline-block;
+      
+}
+
+ #submit{
+   /* Fill the attributes and values */
+   color: #FFFFFF;
+   background-color: green;
+   padding: 5px;
+   width:10%;
+   font-weight: bold;
+   border-radius: 1px;
+  }
+  #result{
+   /* Fill the attributes and values */
+   color:#3B2F2F;
+   font-size: 20px;
+      font-weight: bold;
+     font-family:"Times New Roman", Times, serif;
+   
+  }
+.btn {
+   background-color: black;
+   border-radius: 5px;
+   color: #000000;
+   padding: 16px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 20px;
+   margin-top: 20px;
+   margin-left: 80px;
+   border: 2px solid black;
+   cursor: pointer;
+}
+  
+p{
+  color: black;
+  font-family: Times New Roman;
+  font-size: 18px;
+  margin-left: 20px;
+}
+div {
+  border-radius: 15px;
+  background-color:#E3E4FA;
+  padding: 10px;
+}
+</style>
+</head>
+<body> 
+ 
+
+<h1>PAYMENT</h1>
+   <h2>Account Holder Name: Mosaad</h2>
+   <h3>Current Balance: <span id="myAccountBalance">27000</span></h3>
+<p>Select the user you want to transfer and the amount.</p>
+<div>
+  <form onsubmit="return display()">
+    <label for="names">USER Name: </label>
+    <select id="names" name="names">
+      <option value="Sunil">Sunil</option>
+      <option value="Amit">Amit</option>
+      <option value="Srirag">Srirag</option>
+      <option value="Lohith">Lohith</option>
+      <option value="Pawan">Pawan</option>
+      <option value="Kiran">Kiran</option>
+      <option value="Syam">Syam</option>
+      <option value="Hemanth">Hemanth</option>
+      <option value="Kirana Store">Kirana Store</option>
+      <option value="Noodles Centre">Noodles centre</option>
+    </select>
+    <label for="amount">AMOUNT : </label>
+    <input type="text" id="amount" name="amount" placeholder="Enter your amount..." required/>
+     <br><br><br> <p><input type="submit" id="submit" name="submit" value="Pay Now" /></p>
+    
+    <div id="result"></div>
+  </form>
+</div>
+  
+   <script src="https://chavali19.github.io/my-project/script2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+   
+<a href="https://chavali19.github.io/my-project/endpage.html" class="exit">Exit</a>
+  <a class="btn btn-info" href="" data-toggle="modal" data-target="#Transactionhistory">Transaction History</a>
+     <div class="modal fade" id="Transactionhistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol id="transaction-history-body">
+
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </body>
+</html>
